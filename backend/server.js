@@ -31,6 +31,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use("/article", postRoute);
 app.use("/users", userRoute);
 app.use("/auth", authRoute);
