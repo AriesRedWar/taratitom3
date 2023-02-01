@@ -12,7 +12,8 @@ function Register() {
 
   const reload = async () => {
     navigate("/")
-    const data =  fetch("http://localhost:3001/users", requestOptions)
+    const data =  fetch("/users", requestOptions)
+    console.log("its time to save it!", data);
   }
     
     const requestOptions = {

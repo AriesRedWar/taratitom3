@@ -1,18 +1,18 @@
 {
-  "main.css": "/static/css/main.a8946195.chunk.css",
-  "main.js": "/static/js/main.fc34a7f5.chunk.js",
-  "main.js.map": "/static/js/main.fc34a7f5.chunk.js.map",
-  "static/js/1.51b078aa.chunk.js": "/static/js/1.51b078aa.chunk.js",
-  "static/js/1.51b078aa.chunk.js.map": "/static/js/1.51b078aa.chunk.js.map",
-  "static/js/2.6a4ecf46.chunk.js": "/static/js/2.6a4ecf46.chunk.js",
-  "static/js/2.6a4ecf46.chunk.js.map": "/static/js/2.6a4ecf46.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.b031070a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.b031070a.js.map",
-  "static/media/header.css": "/static/media/travelsuitcase.4a2fc97c.jpg",
-  "static/media/register.css": "/static/media/airplane.fefb7be6.jpg",
-  "static/media/login.css": "/static/media/maldives.57bcd5e4.jpg",
-  "static/css/main.a8946195.chunk.css.map": "/static/css/main.a8946195.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.01170430ad61d0f18ada3e4c3b2a6291.js": "/precache-manifest.01170430ad61d0f18ada3e4c3b2a6291.js",
-  "service-worker.js": "/service-worker.js"
+  "files": {
+    "main.css": "/static/css/main.9cb06947.css",
+    "main.js": "/static/js/main.b7345c55.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/travelsuitcase.jpg": "/static/media/travelsuitcase.aa9fa125963f4570e11c.jpg",
+    "static/media/maldives.jpg": "/static/media/maldives.401ae4ef1ec56c1ca4ce.jpg",
+    "static/media/airplane.jpg": "/static/media/airplane.1b1bbf9b35999674d048.jpg",
+    "index.html": "/index.html",
+    "main.9cb06947.css.map": "/static/css/main.9cb06947.css.map",
+    "main.b7345c55.js.map": "/static/js/main.b7345c55.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cb06947.css",
+    "static/js/main.b7345c55.js"
+  ]
 }
