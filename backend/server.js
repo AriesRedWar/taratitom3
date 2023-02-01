@@ -10,9 +10,6 @@ const postRoute = require("./controller/articles_controller.js");
 const userRoute = require("./controller/users_controller.js");
 const authRoute = require("./controller/authentication_controller.js");
 
-app.use(cors());
-app.use(express.json());
-
 // app.get("/", (req, res) => {
 //   res.send("Hey there!!!");
 // });
@@ -29,11 +26,18 @@ mongoose.connect(
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(cors());
+
+app.use(express.json());
+
 app.use("/article", postRoute);
+
 app.use("/users", userRoute);
+
 app.use("/auth", authRoute);
 
 app.use(express.static(path.join(__dirname, "../frontend", "build")));

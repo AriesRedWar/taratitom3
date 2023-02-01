@@ -46,7 +46,7 @@ router.get('/profile', async (req, res) => {
 
             // Get the logged in user's id from the payload
             const { id } = result.value
-            console.log("value of id:", id)
+            // console.log("value of users id:", id)
 
             // Find the user object using their id:
             let user = await User.findOne({

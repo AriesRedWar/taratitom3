@@ -11,7 +11,7 @@ import AddArticle from './pages/articles/AddArticle'
 import EditArticle from './components/editarticle/EditArticle';
 
 
-function App(post) {
+function App() {
   return (
     <CurrentUserProvider>
       <TopBar />

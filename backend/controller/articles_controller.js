@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
       res.send(foundArticle)
     })
     .catch(err => {
+      console.log(err);
       res.render('error404')
     })
 })
@@ -21,6 +22,7 @@ router.get('/:id', (req, res) => {
 
     })
     .catch(err => {
+      console.log(err);
       res.render('error404')
     })
 })
@@ -40,10 +42,12 @@ router.post('/', (req, res) => {
 //DELETE ARTICLE
 router.delete('/:id', (req, res) => {
   Article.findByIdAndDelete(req.params.id)
-    .then(deletedArticle => {
-      res.status(303).redirect('/article')
+    .then(foundArticle => {
+      res.send(foundArticle)
+      res.status(303).redirect('/')
     })
     .catch(err => {
+      console.log(err);
       res.render('Delete unsuccessful')
     })
 })
@@ -52,10 +56,11 @@ router.delete('/:id', (req, res) => {
 //EDIT/UPDATE ARTICLE
 router.put('/:id', (req, res) => {
   Article.findByIdAndUpdate(req.params.id, req.body)
-    .then(updatedArticle => {
-      res.redirect(`/article/${req.params.id}`)
+    .then(foundArticle => {
+      foundArticle.save()
     })
     .catch(err => {
+      console.log(err);
       res.render('error404')
     })
 })
