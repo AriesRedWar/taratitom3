@@ -23,6 +23,7 @@
     "mongoose": "^6.8.3",
     "nodemon": "^2.0.20",
     "pg": "^8.8.0",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "vercel": "^28.15.0"
   }
 }
