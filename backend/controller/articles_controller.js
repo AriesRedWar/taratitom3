@@ -1,10 +1,10 @@
 const express = require('express')
-const article = express.Router()
+const router = express.Router()
 const Article = require('../models/article.js')
 
 
 //GET ALL ARTICLES
-article.get('/', (req, res) => {
+router.get('/', (req, res) => {
   Article.find()
     .then(foundArticle => {
       res.send(foundArticle)
@@ -14,7 +14,7 @@ article.get('/', (req, res) => {
     })
 })
 
-article.get('/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   Article.findById(req.params.id)
     .then(foundArticle => {
       res.send(foundArticle)
@@ -26,7 +26,7 @@ article.get('/:id', (req, res) => {
 })
 
 //CREATE NEW ARTICLE
-article.post('/', (req, res) => {
+router.post('/', (req, res) => {
   Article.create(req.body)
     .then(foundArticle => {
       res.send(foundArticle)
@@ -38,7 +38,7 @@ article.post('/', (req, res) => {
 })
 
 //DELETE ARTICLE
-article.delete('/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   Article.findByIdAndDelete(req.params.id)
     .then(deletedArticle => {
       res.status(303).redirect('/article')
@@ -50,7 +50,7 @@ article.delete('/:id', (req, res) => {
 
 
 //EDIT/UPDATE ARTICLE
-article.put('/:id', (req, res) => {
+router.put('/:id', (req, res) => {
   Article.findByIdAndUpdate(req.params.id, req.body)
     .then(updatedArticle => {
       res.redirect(`/article/${req.params.id}`)
@@ -61,4 +61,4 @@ article.put('/:id', (req, res) => {
 })
 
 // export
-module.exports = article
+module.exports = router

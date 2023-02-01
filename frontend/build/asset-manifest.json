@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.9cb06947.css",
-    "main.js": "/static/js/main.b7345c55.js",
+    "main.js": "/static/js/main.ad35d916.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/travelsuitcase.jpg": "/static/media/travelsuitcase.aa9fa125963f4570e11c.jpg",
     "static/media/maldives.jpg": "/static/media/maldives.401ae4ef1ec56c1ca4ce.jpg",
     "static/media/airplane.jpg": "/static/media/airplane.1b1bbf9b35999674d048.jpg",
     "index.html": "/index.html",
     "main.9cb06947.css.map": "/static/css/main.9cb06947.css.map",
-    "main.b7345c55.js.map": "/static/js/main.b7345c55.js.map",
+    "main.ad35d916.js.map": "/static/js/main.ad35d916.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9cb06947.css",
-    "static/js/main.b7345c55.js"
+    "static/js/main.ad35d916.js"
   ]
 }

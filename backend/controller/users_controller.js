@@ -1,11 +1,24 @@
 const express = require('express')
-const user = express.Router()
+const router = express.Router()
 const User = require('../models/users.js')
 //require bcrypt to hash passwords
 const bcrypt = require('bcrypt')
 
+router.get("/", (req, res) => {
+  console.log("WE SMACKED THE GET ROUTER /Users !!!");
+  User.find()
+    .then((foundUser) => {
+      res.json(foundUser); //res.render
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json("error404");
+    });
+});
 
-user.post('/', async (req, res) => {
+
+router.post('/', async (req, res) => {
+  console.log("Are you even working bro? New User", req.body);
   const { password, ...rest } = req.body
   const passwordDigest = await bcrypt.hash(password, 12)
   const user = { ...rest, password: passwordDigest }
@@ -18,9 +31,13 @@ user.post('/', async (req, res) => {
 
 })
 
+router.get("/", async (req, res) => {
+  const users = await User.findAll();
+  res.json(users);
+});
 
 //FIND USER BY ID
-user.get("/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
 
   try {
     const user = await User.findById(req.params.id);
@@ -31,4 +48,4 @@ user.get("/:id", async (req, res) => {
 });
 
 
-module.exports = user
+module.exports = router
