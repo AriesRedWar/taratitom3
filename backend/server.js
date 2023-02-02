@@ -49,4 +49,6 @@ app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
 });
 
-app.listen(PORT, console.log(`App is listening on http://localhost:${PORT}`));
+app.listen(process.env.PORT, () => {
+  console.log(`Server listening on`, PORT);
+});
