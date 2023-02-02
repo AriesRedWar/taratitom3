@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 function Card({post}) {
   return (
       <div className="card">
-          <img className='img_1' src={post.image} />
+          <img className='img_1' src={post.image} alt={post.title}/>
           <div className="cardinfo">
               <span className='title'>{post.title}</span>
               <span className='post_date'><em>{post.date}</em></span>

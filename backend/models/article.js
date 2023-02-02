@@ -4,7 +4,7 @@ const { Schema } = mongoose
 
 const articleSchema = new Schema ({
     title: { type: String, required: true },
-    image: { type: String, default: 'http://placekitten.com/350/500' },
+    image: { type: String },
     date: { type: Number },
     description: { type: String },
     author: { type: String },
