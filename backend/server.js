@@ -23,7 +23,7 @@ mongoose.connect(
     useUnifiedTopology: true,
   },
   () => {
-    console.log(`connected to mongo: ${MONGO_URI}`);
+    console.log(`we are connected to mongo: ${MONGO_URI}`);
   }
 );
 
