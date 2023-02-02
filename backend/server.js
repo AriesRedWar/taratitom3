@@ -26,7 +26,7 @@ mongoose.connect(
     console.log(`we are connected to mongo: ${MONGO_URI}`);
   }
 );
-
+console.log(MONGO_URI)
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
