@@ -5,7 +5,7 @@ const PORT = process.env.PORT;
 const path = require("path");
 const app = express();
 const cors = require("cors");
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
 const postRoute = require("./controller/articles_controller.js");
 const userRoute = require("./controller/users_controller.js");
 const authRoute = require("./controller/authentication_controller.js");
@@ -24,9 +24,11 @@ mongoose.connect(
   },
   () => {
     console.log(`we are connected to mongo: ${MONGO_URI}`);
+    console.log(process.env.JWT_SECRET);
+    console.log(PORT);
   }
 );
-console.log(MONGO_URI)
+
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
